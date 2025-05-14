@@ -5,6 +5,7 @@ using UnityEngine;
 public class RotateCircle : MonoBehaviour
 {
     public float rotateSpeed = 0f;
+    public bool rotNeg;
 
     void Start ()
     {
@@ -13,7 +14,10 @@ public class RotateCircle : MonoBehaviour
 
     void Update()
     {
-        transform.Rotate(0f, 0f, rotateSpeed * Time.deltaTime);
+        if(rotNeg)
+           transform.Rotate(0f, 0f, rotateSpeed * -1f * Time.deltaTime);
+        else 
+            transform.Rotate(0f, 0f, rotateSpeed * Time.deltaTime);
     }
 
     void ChangeSpeed()

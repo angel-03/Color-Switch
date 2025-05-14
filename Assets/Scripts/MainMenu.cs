@@ -13,7 +13,7 @@ public class MainMenu : MonoBehaviour
     void Start()
     {
         if(highScoreText != null)
-            highScoreText.text = "HighScore: \n" +  + PlayerPrefs.GetInt("HighScore", 0);
+            highScoreText.text = "HighScore: " +  + PlayerPrefs.GetInt("HighScore", 0);
     }
 
     public void OnClickStartButton()
